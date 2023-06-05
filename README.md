@@ -60,3 +60,44 @@ _note:_ you may have to run npm i, mkdir, and touch multiple times through these
 ### Bonus III
 - Using the Plants API HW as a reference, add in CRUD functionality to your back end, and test it with ThunderClient 
 - If you've gotten this far, we have a real challenge for you... use the Axios library to give your front end full CRUD as well!
+
+
+
+
+SCHEMA 
+          +------------------------+
+          |         Movies         |
+          +------------------------+
+          | - Title                |
+          | - Runtime              |
+          | - Rating               |
+          | - Year Released        |
+          | - Description          |
+          | - Poster Image         |
+          +------------------------+
+                   |
+                   |
+                   |
+                   |
+                   v
+          +------------------------+
+          |        Reviews         |
+          +------------------------+
+          | - Movie (FK)           |
+          | - Score                |
+          | - Comment              |
+          +------------------------+
+                   |
+                   |
+                   |
+                   |
+                   v
+          +------------------------+
+          |        Actors          |
+          +------------------------+
+          | - Name                 |
+          | - Age                  |
+          | - Alive                |
+          | - Additional properties|
+          | - Image                |
+          +------------------------+
