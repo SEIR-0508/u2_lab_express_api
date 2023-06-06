@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const reviewSchema = new Schema(
+const Review = new Schema(
   {
     score: { type: Number, required: true },
     comment: { type: String, required: true },
@@ -9,4 +9,4 @@ const reviewSchema = new Schema(
   { timestamps: true }
 )
 
-module.exports = reviewSchema
+module.exports = Review

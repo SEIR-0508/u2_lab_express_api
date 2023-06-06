@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const actorSchema = new Schema(
+const Actor = new Schema(
   {
     name: { type: String, required: true },
     age: { type: Number, required: true },
@@ -9,4 +9,4 @@ const actorSchema = new Schema(
   { timestamps: true }
 )
 
-module.exports = actorSchema
+module.exports = Actor
