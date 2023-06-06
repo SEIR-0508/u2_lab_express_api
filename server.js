@@ -7,7 +7,7 @@ const app = express()
 // link controllers
 const actorsController = require('./controllers/actorsController.js')
 const moviesController = require('./controllers/moviesController.js')
-// const reviews Controller = 
+const reviewsController = require('./controllers/reviewsController.js')
 
 // WITHOUT controller files: 
 // const { Movie, Actor, Review } = require('./models')
@@ -54,15 +54,19 @@ app.get('/actors/:id', actorsController.getActorById)
         // })
 
 // endpoint for reviews index
-app.get('/reviews', async (req, res) => {
-    const reviews = await Review.find({})
-    res.json(reviews)
-})
+app.get('/reviews', reviewsController.getAllReviews)
+    // WITHOUT CONTROLLER FILE:
+        // app.get('/reviews', async (req, res) => {
+        //     const reviews = await Review.find({})
+        //     res.json(reviews)
+        // })
 
 // endpoint for reviews show route
-app.get('/reviews/:id', async (req, res) => {
-    const { id } = req.params
-    const review = await Review.findById(id)
-    res.json(review)
-})
+app.get('/reviews/:id', reviewsController.getReviewById)
+    // WITHOUT CONTROLLER FILE:
+        // app.get('/reviews/:id', async (req, res) => {
+        //     const { id } = req.params
+        //     const review = await Review.findById(id)
+        //     res.json(review)
+        // })
 
