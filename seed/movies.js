@@ -13,7 +13,7 @@ const main = async () => {
         runtime: 218,
         rating: 8.3,
         description: `The story of T.E. Lawrence, the English officer who successfully united and led the diverse, often warring, Arab tribes during World War I in order to fight the Turks.`,
-        poster: `https://i.imgur.com/f84hW45.jpg?1`
+        poster: `https://i.imgur.com/f84hW45.jpg`
     },
     {
         title: 'The Lord of the Rings: The Return of the King',
@@ -23,7 +23,7 @@ const main = async () => {
         runtime: 201,
         rating: 9.0,
         description: `Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.`,
-        poster: `https://i.imgur.com/ieFVUOJ.jpg?1`
+        poster: `https://i.imgur.com/ieFVUOJ.jpg`
     },
     {
         title: `Ocean's 8`,

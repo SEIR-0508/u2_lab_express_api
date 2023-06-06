@@ -5,11 +5,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
     const movies = await Movie.find({})
-    // const lawrence = await Movie.find({ title: 'Lawrence of Arabia' })
-    // const rotk = await Movie.find({ title: 'The Lord of the Rings: The Return of the King' })
-    // const oceans8 = await Movie.find({ title: `Ocean's 8` })
-    // const mummy = await Movie.find({ title: 'The Mummy' })
-    // const madmax = await Movie.find({ title: `Mad Max: Fury Road` })
     const reviews = [
         {
             title: `Great fun in the vein of "Indiana Jones"...`,
