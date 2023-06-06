@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3001
 const db = require('./db')
 const app = express()
 
-const { Movie, Actor } = require('./models')
+const { Movie, Actor, Review } = require('./models')
 
 // link controllers
 // const actorController = 
@@ -20,14 +20,42 @@ app.get('/', (req, res) => {
 })
 
 // endpoint for movies index
+app.get('/movies', async (req, res) => {
+    const movies = await Movie.find({})
+    res.json(movies)
+})
+// endpoint for movies show route
+app.get('/movies/:id', async (req, res) => {
+    const { id } = req.params
+    const movie = await Movie.findById(id)
+    res.json(movie)
+})
+// endpoint for movies not found
 
 // endpoint for actors index
-// endpoint for reviews index
-
-// endpoint for movies show route
+app.get('/actors', async (req, res) => {
+    const actors = await Actor.find({})
+    res.json(actors)
+})
 // endpoint for actors show route
-// endpoint for reviews show route
-
-// endpoint for movies not found
+app.get('/actors/:id', async (req, res) => {
+    const { id } = req.params
+    const actor = await Actor.findById(id)
+    res.json(actor)
+})
 // endpoint for actors not found
+
+// endpoint for reviews index
+app.get('/reviews', async (req, res) => {
+    const reviews = await Review.find({})
+    res.json(reviews)
+})
+
+// endpoint for reviews show route
+app.get('/reviews/:id', async (req, res) => {
+    const { id } = req.params
+    const review = await Review.findById(id)
+    res.json(review)
+})
+
 // endpoint for reviews not found
