@@ -1,0 +1,33 @@
+/* Atributes */
+body {
+    text-align: center;
+    background-color: lightslategray;
+}
+
+img {
+    height: 600px;
+}
+
+/* Class's */
+
+.movieName {
+    font-size: 74px;
+}
+
+.line {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: .25rem solid black;
+}
+
+.col {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Movie Finder!</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Steven's Movie Finder!</h1>
+        </div>
+    </header>
+    <nav>
+        <select id="movieSelector" >
+            <option value="default">Find a movie</option>
+        </select>
+        <button class="search">Search</button>
+    </nav>
+    <main>
+        <div class="row">
+            <div class="movieName"></div>
+        </div>
+        <div class="row">
+            <div class="poster"></div>
+        </div>
+        <div class="row">
+            <div class="description"></div>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="rating info"></div>
+                <div class="datePublished info"></div>
+            </div>
+            <div class="col">
+                <div class="producer info"></div>
+                <div class="runTime info"></div>
+            </div>
+        </div>
+            <div class="line"></div>
+        <div class="row">
+            <div class="actors"></div>
+            <p>List of actors will go here</p>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+            <div class="reviews"></div>
+            <p>List of reviews will go here</p>
+        </div>
+        <div class="line"></div>
+        <div class="row">
+            <p>no functionality for buttons yet</p>
+            <button>Add Review</button>
+            <button>Add Actor/Actress</button>
+        </div>
+        <div class="row">
+            <p>no functionality for buttons yet</p>
+            <button>Add Movie</button>
+            <button>Delete Movie</button>
+        </div>
+    </main>
+</body>
+<script src="scripts.js"></script>
+</html>
