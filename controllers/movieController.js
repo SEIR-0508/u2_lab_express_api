@@ -17,7 +17,14 @@ const getMovieById = async (req, res) => {
     }
 };
 
+const sortMovieReleaseDate = async (req, res) => {
+    const sortedMovies = await Movie.find({}).sort({ releaseYear: 1 });
+    console.log(sortedMovies);
+    res.json(sortedMovies);
+};
+
 module.exports = {
     getMovies,
     getMovieById,
+    sortMovieReleaseDate,
 };

@@ -17,7 +17,22 @@ const getReviewById = async (req, res) => {
     }
 };
 
+const sortReviews = async (req, res) => {
+    const { way } = req.params;
+    const sortedReviews = await sortWhichWay(way);
+    res.json(sortedReviews);
+};
+
+const sortWhichWay = (way) => {
+    if (way === "asc") {
+        return Review.find({}).sort({ _id: 1 });
+    } else if (way == "desc") {
+        return Review.find({}).sort({ _id: -1 });
+    }
+};
+
 module.exports = {
     getReviews,
     getReviewById,
+    sortReviews,
 };
