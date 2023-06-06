@@ -17,7 +17,7 @@ app.listen(PORT, () => {
 })
 
 // establish root endpoint
-app.get('/', (req, res) => res.send(`This is the landing page`))
+app.get('/', (req, res) => res.send(`This is the landing page for Elliot's movie database!`))
 
 // endpoint for movies index
 app.get('/movies', moviesController.getAllMovies)
