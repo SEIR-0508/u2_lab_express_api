@@ -56,6 +56,7 @@ const main = async () => {
         poster: `https://i.imgur.com/o4l1k5L.jpg`
     }
     ]
+    await Movie.deleteMany()
     await Movie.insertMany(movies)
     console.log('created movies')
 }

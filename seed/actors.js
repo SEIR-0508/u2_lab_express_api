@@ -82,6 +82,7 @@ const main = async () => {
             headshot: `https://i.imgur.com/AZzYeqE.jpg`
         }
     ]
+    await Actor.deleteMany()
     await Actor.insertMany(actors)
     console.log('created actors')
 }

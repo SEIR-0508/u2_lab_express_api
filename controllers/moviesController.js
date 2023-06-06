@@ -25,9 +25,23 @@ const getMovieById = async (req, res) => {
     }
 }
 
+// sort by release year
+const movieSort = async (req, res) => {
+    const sortOrder = `${req.query.order}`
+    if (sortOrder === 'asc' || sortOrder === 'Asc' || sortOrder === 'ASC') {
+        const sortAsc = await Movie.find({}).sort({ release_year: 1 })
+        return res.status(200).json({ sortAsc })
+    } else if (sortOrder === 'desc' || sortOrder === 'Desc' || sortOrder === 'DESC') {
+        const sortDesc = await Movie.find({}).sort({ release_year: -1 })
+        return res.status(200).json({ sortDesc })
+    } else {
+        res.status(404).send(`Path not found`)
+    }
+}
+ 
+
 module.exports = {
-    // all movies
     getAllMovies,
-    // one movie
-    getMovieById
+    getMovieById,
+    movieSort
 }

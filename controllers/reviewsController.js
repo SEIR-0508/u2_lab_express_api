@@ -24,11 +24,22 @@ const getReviewById = async (req, res) => {
         return res.status(500).send(error.message)
     }
 }
-
+// sort reviews by date
+const reviewSort = async (req, res) => {
+    const sortOrder = `${req.query.order}`
+    if (sortOrder == 'asc') {
+        const sortAsc = await Review.find({}).sort({ date: 1 })
+        return res.status(200).json({ sortAsc })
+    } else if (sortOrder === 'desc' || sortOrder === 'Desc' || sortOrder === 'DESC') {
+        const sortDesc = await Review.find({}).sort({ date: -1 })
+        return res.status(200).json({ sortDesc })
+    } else {
+        return res.status(404).send(`Path not found`)
+    }
+}
 
 module.exports = {
-    // all reviews
     getAllReviews,
-    // one review
-    getReviewById
+    getReviewById,
+    reviewSort
 }
