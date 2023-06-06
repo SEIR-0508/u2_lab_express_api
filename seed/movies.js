@@ -1,7 +1,7 @@
 const db = require('../db')
 const { Movies } = require('../models')
 
-db.on('error', console.error.bine(console, 'connect fail'))
+db.on('error', console.error.bind(console, 'connect fail'))
 
 const insertMovies = async () => {
     const movies = [
