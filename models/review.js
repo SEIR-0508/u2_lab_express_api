@@ -16,4 +16,4 @@ const Review = new Schema(
     { timestamps: true },
 )
 
-module.exports = mongoose.model('movies', Review)
+module.exports = mongoose.model('reviews', Review)

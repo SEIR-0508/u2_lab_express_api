@@ -13,4 +13,4 @@ const Actor = new Schema(
     { timestamps: true },
 )
 
-module.exports = mongoose.model('movies', Movie)
+module.exports = mongoose.model('actors', Actor)

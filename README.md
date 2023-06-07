@@ -24,7 +24,7 @@ _note:_ you may have to run npm i, mkdir, and touch multiple times through these
 4) Create 3 schemas, Movies, Reviews and Actors. You _mayyyy_ want to spend ~30 minutes making an ERD for these before you move further in this. 
 
 
--  Your movies model should have a Title, Runtime, Rating, Year Released and a brief description. You can also include a link to a poster image for it, or try to upload an image file if you want a challenge! Think of what data types you'll want to use for each of these additional properties
+-  Your movies model should have a Title, Runtime, review, Year Released and a brief description. You can also include a link to a poster image for it, or try to upload an image file if you want a challenge! Think of what data types you'll want to use for each of these additional properties
 
 - Your actors model should have properties for Name and Age, and one that says if they are Alive or not, plus any other properties you'll want to include. Again, try to add images using either method. What datatypes would we use for our other properties?
 
