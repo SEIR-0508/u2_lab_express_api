@@ -6,7 +6,6 @@ const getReviews = async (req, res) => {
     res.json(reviews)
 }
 
-
 module.exports = {
     getReviews
 }
