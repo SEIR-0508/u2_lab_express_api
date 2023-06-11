@@ -1,4 +1,5 @@
 const { Schema } = require('mongoose');
+const mongoose = require('mongoose')
 
 const reviewSchema = new Schema({
   score: {
@@ -18,6 +19,6 @@ const reviewSchema = new Schema({
   }
 });
 
-const Review = mongoose.model('Review', reviewSchema);
+// const Review = mongoose.model('Review', reviewSchema)
 
-module.exports = Review;
+module.exports = reviewSchema

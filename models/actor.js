@@ -21,5 +21,5 @@ const actorSchema = new Schema({
 },
 {timestamps: true})
 
-const Actor = mongoose.model('Actor', actorSchema)
-module.exports = Actor
+// const Actor = mongoose.model('Actor', actorSchema)
+module.exports = actorSchema
