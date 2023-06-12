@@ -3,7 +3,10 @@ const db = require('./db')
 const PORT = 3001
 const app = express()
 const cors = require('cors')
-const { Movies, Actors, Reviews } = require('./models')
+const AppRouter = require('./routes/AppRouter')
+
+
+
 
 app.use(express.json())
 app.use(cors())
@@ -16,17 +19,19 @@ app.listen(PORT, () => {
 })
 
 
-app.get('/', async (req, res)=> {
-    let movie = await Movies.find() 
-    res.send(movie)
-})
 
-app.get('/actors', async (req, res)=> {
-    let actors = await Actors.find() 
-    res.send(actors)
-})
+// app.get('/', async (req, res)=> {
+//     let movie = await Movies.find() 
+//     res.send(movie)
+// })
 
-app.get('/review', async (req, res)=> {
-    let review = await Reviews.find() 
-    res.send(review)
-})
+// app.get('/review', async (req, res)=> {
+//     let review = await Reviews.find() 
+//     res.send(review)
+// })
+
+
+app.use('/api', AppRouter)
+
+
+
