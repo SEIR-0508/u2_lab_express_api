@@ -8,6 +8,10 @@ const getReviews = async (req, res) => {
 }
 
 
+const createReview = async (req, res) => {
+    const newReview = await Reviews.createOne()
+    res.json(newReview)
+}
 
 const reviewAssend = async (req, res) => {
     const reviews = await Reviews.find({}).sort({review: 1,})
@@ -42,5 +46,6 @@ module.exports = {
     reviewAssend,
     reviewDecend,
     getReviewById,
-    getReviews
+    getReviews,
+    createReview
 }

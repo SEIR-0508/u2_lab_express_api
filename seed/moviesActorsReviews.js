@@ -115,6 +115,21 @@ const main = async () => {
             comments: 'Po-ta-tos',
             review: '91%'
                 },
+                {
+            Reviewed_movie: movies1._id,
+            comments: 'The greatest movie written about the weather',
+            review: '80%'
+                },
+                {
+            Reviewed_movie: movies2._id,
+            comments: 'Well recognized in the automovive community as bringing car cutlure to the mainstreem.  Its relatively infrequent usage of automotive jargon is apparently enought to place the film high on the automotive mantle.',
+            review: '81%'
+                },
+                {
+            Reviewed_movie: movies4._id,
+            comments: 'A great movie where the viewer is torn bwtween wanting to see the protagionist succed despite how terrible he is.',
+            review: '100%'
+                },
              
         ]
 

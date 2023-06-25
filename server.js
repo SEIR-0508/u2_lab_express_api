@@ -31,7 +31,7 @@ app.listen(PORT, () => {
 // })
 
 
-app.use('/api', AppRouter)
+app.use('/', AppRouter)
 
 
 
